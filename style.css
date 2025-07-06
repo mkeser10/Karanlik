@@ -1,0 +1,77 @@
+
+
+/* Yeni Animasyonlar ve Efektler */
+.game-play-screen.wrong-answer-effect {
+    animation: shake 0.5s ease-in-out;
+    background-color: rgba(255, 0, 0, 0.3); /* Hafif kırmızı titreme */
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.game-play-screen.correct-answer-effect {
+    animation: flash 0.3s ease-out;
+    background-color: rgba(0, 255, 0, 0.1); /* Hafif yeşil parlama */
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* Kaybetme Ekranı Görseli */
+#endScreenImage {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+    border: 2px solid #8b0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Mobil Uyumluluk İyileştirmeleri */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .button-container button {
+        font-size: 1.2em;
+        padding: 12px 20px;
+    }
+
+    #questionText {
+        font-size: 1.1em;
+    }
+
+    #endScreenImage {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .button-container button {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    #questionText {
+        font-size: 1em;
+    }
+}
+
+

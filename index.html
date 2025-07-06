@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karanlığın Sorusu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Başlangıç Ekranı -->
+        <div id="start-screen" class="game-screen active">
+            <h1>KARANLIĞIN SORUSU</h1>
+            <button id="startButton">BAŞLA</button>
+            <button id="soundToggleButton">Ses: Açık</button>
+        </div>
+
+        <!-- Oyun Ekranı -->
+        <div id="game-play-screen" class="game-screen" style="display:none;">
+            <img id="gameImage" src="" alt="Oyun Görseli" class="game-image">
+            <div class="info-bar">
+                <span id="levelDisplay">Seviye: 1</span>
+                <span id="timerDisplay">Süre: 15</span>
+                <span id="livesDisplay">Can: ❤️❤️❤️</span>
+                <span id="scoreDisplay">Skor: 0</span>
+            </div>
+            <p id="questionText"></p>
+            <div class="button-container">
+                <button id="choiceA"></button>
+                <button id="choiceB"></button>
+            </div>
+        </div>
+
+        <!-- Sonuç Ekranı -->
+        <div id="end-screen" class="game-screen" style="display:none;">
+            <img id="endScreenImage" src="" alt="Sonuç Görseli" class="end-image">
+            <p id="finalMessage"></p>
+            <p id="finalScore"></p>
+            <p id="currentHighScore"></p>
+            <button id="restartButton">Tekrar Oyna</button>
+            <button id="exitButton">Çıkış</button>
+        </div>
+    </div>
+
+    <script src="game_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
